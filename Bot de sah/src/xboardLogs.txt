@@ -1,0 +1,6 @@
+time 30000
+otim 30000
+d2d4
+time 29992
+otim 29887
+e2e4
