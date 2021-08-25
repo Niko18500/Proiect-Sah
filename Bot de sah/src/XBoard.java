@@ -34,6 +34,7 @@ public class XBoard {
         currentMove.setTime(reader.readLine());
         currentMove.setOtim(reader.readLine());
         currentMove.setMove(reader.readLine());
+        currentMove.registerMove();
     }
 
     public static void sendMove(final String move) {

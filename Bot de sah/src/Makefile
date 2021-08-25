@@ -7,5 +7,5 @@ run: main
 	java Main
 
 clean:
-	rm *.class
+	rm -r *.class
 

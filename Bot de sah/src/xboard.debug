@@ -10,40 +10,33 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-97 >first : xboard
+165 >first : xboard
 protover 2
-98 <first : javac -g Main.java
-456 <first : java Main
-496 <first : feature sigint=0 san=0 name=SuperBot done=1
-496 >first : accepted sigint
-496 >first : accepted san
-496 >first : accepted name
-496 >first : accepted done
-496 <first : 
-497 >first : new
+167 <first : javac -g Main.java
+747 <first : java Main
+775 <first : [71494648379473920, 71495743596134400, 71213177697730560, 71215368131051520, 70650236334243840, 70654617200885760, 69524353607270400, 69533115340554240, 67272588153323520, 67290111619891200, 62769057245429760, 62804104178565120, 53761995429642240, 53832089295912960, 35747871798067200, 35888059530608640]
+776 <first : feature sigint=0 san=0 name=SuperBot done=1
+776 >first : accepted sigint
+776 >first : accepted san
+776 >first : accepted name
+776 >first : accepted done
+776 <first : 
+777 >first : new
 random
-497 >first : level 40 5 0
-497 >first : post
-497 >first : hard
+777 >first : level 40 5 0
+777 >first : post
+777 >first : hard
 nps: w=-1, b=-1
 nps: w=-1, b=-1
-2191 >first : time 30000
-2191 >first : otim 30000
+2291 >first : time 30000
+2291 >first : otim 30000
 book hit = (NULL)
-2191 >first : d2d4
-2267 <first : move d7d5
-2344 <first : 
-3224 >first : time 29992
-3224 >first : otim 29904
-book hit = (NULL)
-3225 >first : e2e3
-3299 <first : move b8c6
-3396 <first : 
-6084 >first : time 29984
-6086 >first : otim 29625
-book hit = (NULL)
-6086 >first : f1b5
-GameEnds(27, Error writing to first chess program, 2)
-7414 >first : result 0-1 {Error writing to first chess program}
-7414 >first : force
-7414 >first : quit
+2291 >first : d2d4
+2293 <first : d2
+2293 <first : d4
+2313 <first : move d7d5
+2390 <first : 
+GameEnds(29, xboard exit, 2)
+3448053 >first : result * {xboard exit}
+3448054 >first : force
+3448054 >first : quit

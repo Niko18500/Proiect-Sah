@@ -2,6 +2,8 @@ package board;
 
 import common.Constants;
 
+import java.util.List;
+
 public class Knights extends Pieces {
 
     public Knights(final Color color) {
@@ -22,5 +24,10 @@ public class Knights extends Pieces {
             set_bit(Constants.b8);
             set_bit(Constants.g8);
         }
+    }
+
+    @Override
+    public List<Long> generateMoves(Board board) {
+        return null;
     }
 }

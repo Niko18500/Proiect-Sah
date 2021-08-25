@@ -2,6 +2,8 @@ package board;
 
 import common.Constants;
 
+import java.util.List;
+
 public class Bishops extends Pieces {
 
     public Bishops(final Color color) {
@@ -22,5 +24,10 @@ public class Bishops extends Pieces {
             set_bit(Constants.c8);
             set_bit(Constants.f8);
         }
+    }
+
+    @Override
+    public List<Long> generateMoves(Board board) {
+        return null;
     }
 }

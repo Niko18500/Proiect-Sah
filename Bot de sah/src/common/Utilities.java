@@ -2,6 +2,11 @@ package common;
 
 import board.Pieces;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintStream;
+
 public class Utilities {
     private Utilities() {
     }
