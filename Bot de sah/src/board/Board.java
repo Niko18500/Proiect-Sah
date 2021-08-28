@@ -132,4 +132,84 @@ public class Board {
     public void setBlackPawns(Pawns blackPawns) {
         this.blackPawns = blackPawns;
     }
+
+    public Rooks getWhiteRooks() {
+        return whiteRooks;
+    }
+
+    public void setWhiteRooks(Rooks whiteRooks) {
+        this.whiteRooks = whiteRooks;
+    }
+
+    public Rooks getBlackRooks() {
+        return blackRooks;
+    }
+
+    public void setBlackRooks(Rooks blackRooks) {
+        this.blackRooks = blackRooks;
+    }
+
+    public Knights getWhiteKnights() {
+        return whiteKnights;
+    }
+
+    public void setWhiteKnights(Knights whiteKnights) {
+        this.whiteKnights = whiteKnights;
+    }
+
+    public Knights getBlackKnights() {
+        return blackKnights;
+    }
+
+    public void setBlackKnights(Knights blackKnights) {
+        this.blackKnights = blackKnights;
+    }
+
+    public Bishops getWhiteBishops() {
+        return whiteBishops;
+    }
+
+    public void setWhiteBishops(Bishops whiteBishops) {
+        this.whiteBishops = whiteBishops;
+    }
+
+    public Bishops getBlackBishops() {
+        return blackBishops;
+    }
+
+    public void setBlackBishops(Bishops blackBishops) {
+        this.blackBishops = blackBishops;
+    }
+
+    public Queen getWhiteQueen() {
+        return whiteQueen;
+    }
+
+    public void setWhiteQueen(Queen whiteQueen) {
+        this.whiteQueen = whiteQueen;
+    }
+
+    public Queen getBlackQueen() {
+        return blackQueen;
+    }
+
+    public void setBlackQueen(Queen blackQueen) {
+        this.blackQueen = blackQueen;
+    }
+
+    public King getWhiteKing() {
+        return whiteKing;
+    }
+
+    public void setWhiteKing(King whiteKing) {
+        this.whiteKing = whiteKing;
+    }
+
+    public King getBlackKing() {
+        return blackKing;
+    }
+
+    public void setBlackKing(King blackKing) {
+        this.blackKing = blackKing;
+    }
 }

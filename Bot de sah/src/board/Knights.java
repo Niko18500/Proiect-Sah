@@ -28,6 +28,8 @@ public class Knights extends Pieces {
 
     @Override
     public List<Long> generateMoves(Board board) {
+        long span = 43234889994L;
+
         return null;
     }
 }
