@@ -1,6 +1,8 @@
 import board.Board;
 import board.Color;
+import common.Square;
 import common.Utilities;
+import jdk.jshell.execution.Util;
 
 import java.io.*;
 import java.util.List;
@@ -9,33 +11,23 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Board board = new Board(Color.BLACK); // mai vedem dupa cum se trimite culoarea aia
-        List<Long> pos = board.getBlackPawns().generateMoves(board);
+        List<Long> pos;
         CurrentMove currentMove = new CurrentMove(board);
 
         Utilities.printLong(43234889994L);
 
         XBoard.handshake();
 
-
-
         XBoard.interpretMove(currentMove);
-        pos = board.getBlackPawns().generateMoves(board);
-        System.out.println(pos);
 
         XBoard.sendMove("d7d5", board);
-//        pos = board.getBlackPawns().generateMoves(board);
-//        System.out.println(pos);
-//        for (long iter : pos) {
-//            Utilities.printLong(iter);
-//        }
 
-
-        XBoard.interpretMove(currentMove);
-        pos = board.getBlackPawns().generateMoves(board);
-        System.out.println(pos);
+        pos = board.getBlackKnights().generateMoves(board);
         for (long iter : pos) {
             Utilities.printLong(iter);
         }
+
+        XBoard.interpretMove(currentMove);
 
         XBoard.sendMove("b8c6", board);
 

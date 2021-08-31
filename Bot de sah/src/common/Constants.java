@@ -76,4 +76,15 @@ public class Constants {
     public static final int f8 = 61;
     public static final int g8 = 62;
     public static final int h8 = 63;
+
+    // Constants for mask files (files to be ignored)
+
+    public static final long notAFile = -72340172838076674L;
+    public static final long notBFile = -144680345676153347L;
+    public static final long notGFile = -4629771061636907073L;
+    public static final long notHFile = 9187201950435737471L;
+
+    public static final long notABFile = notAFile & notBFile;
+    public static final long notGHFile = notGFile & notHFile;
+
 }

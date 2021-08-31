@@ -85,6 +85,16 @@ public class Board {
         }
     }
 
+    public long getMyPositions() {
+        if (botColor == Color.WHITE) {
+            return whitePositions;
+        } else {
+            return blackPositions;
+        }
+    }
+
+    /* Getters and setters */
+
     public Color getBotColor() {
         return botColor;
     }
