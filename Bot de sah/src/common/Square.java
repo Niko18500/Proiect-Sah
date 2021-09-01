@@ -76,6 +76,9 @@ public enum Square {
     G8("g8", 62),
     H8("h8", 63);
 
+    public final String position;
+    public final int bits;
+
     private static final Map<String, Square> BY_POSITION = new HashMap<>();
     private static final Map<Integer, Square> BY_BITS = new HashMap<>();
 
@@ -85,9 +88,6 @@ public enum Square {
             BY_BITS.put(e.bits, e);
         }
     }
-
-    public final String position;
-    public final int bits;
 
     private Square(String position, int bits) {
         this.position = position;

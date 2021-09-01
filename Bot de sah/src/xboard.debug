@@ -10,90 +10,90 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-155 >first : xboard
+98 >first : xboard
 protover 2
-157 <first : javac -g Main.java
-753 <first : java Main
-801 <first : 00000000
-801 <first : 00000000
-801 <first : 00000000
-801 <first : 01010000
-801 <first : 10001000
-801 <first : 00000000
-801 <first : 10001000
-801 <first : 01010000
-801 <first : 
-801 <first : 
-802 <first : feature sigint=0 san=0 name=SuperBot done=1
-802 >first : accepted sigint
-802 >first : accepted san
-802 >first : accepted name
-802 >first : accepted done
-802 <first : 
-803 >first : new
+99 <first : javac -g Main.java
+652 <first : java Main
+692 <first : feature sigint=0 san=0 name=SuperBot done=1
+692 >first : accepted sigint
+692 >first : accepted san
+692 >first : accepted name
+692 >first : accepted done
+692 <first : 
+693 >first : new
 random
-803 >first : level 40 5 0
-803 >first : post
-803 >first : hard
+693 >first : level 40 5 0
+693 >first : post
+693 >first : hard
 nps: w=-1, b=-1
 nps: w=-1, b=-1
-2412 >first : time 30000
-2412 >first : otim 30000
+1958 >first : time 30000
+1958 >first : otim 30000
 book hit = (NULL)
-2412 >first : d2d4
-2432 <first : move d7d5
-2510 <first : 
-2510 <first : 00000000
-2510 <first : 00000000
-2510 <first : 10000000
-2510 <first : 00000000
-2510 <first : 00000000
-2510 <first : 00000000
-2510 <first : 00000000
-2510 <first : 00000000
-2510 <first : 
-2511 <first : 
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00100000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 
-2511 <first : 
-2511 <first : 00000000
-2511 <first : 00010000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 
-2511 <first : 
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000100
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 
-2511 <first : 
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000001
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 00000000
-2511 <first : 
-2511 <first : 
-GameEnds(29, xboard exit, 2)
-1818783 >first : result * {xboard exit}
-1818783 >first : force
-1818783 >first : quit
+1958 >first : d2d4
+2033 <first : move d7d5
+2110 <first : 
+2110 <first : 00000000
+2110 <first : 00000000
+2110 <first : 10000000
+2110 <first : 00000000
+2110 <first : 00000000
+2110 <first : 00000000
+2110 <first : 00000000
+2111 <first : 00000000
+2111 <first : 
+2111 <first : 
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00100000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 
+2111 <first : 
+2111 <first : 00000000
+2111 <first : 00010000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 
+2111 <first : 
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000100
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 
+2111 <first : 
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000001
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 00000000
+2111 <first : 
+2111 <first : 
+3149 >first : time 29992
+3149 >first : otim 29888
+book hit = (NULL)
+3149 >first : e2e4
+3223 <first : move b8c6
+3320 <first : 
+3931 >first : time 29984
+3932 >first : otim 29817
+book hit = (NULL)
+3933 >first : e4d5
+GameEnds(27, Error writing to first chess program, 2)
+4607 >first : result 0-1 {Error writing to first chess program}
+4607 >first : force
+4607 >first : quit

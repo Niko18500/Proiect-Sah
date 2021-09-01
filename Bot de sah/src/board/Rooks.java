@@ -1,6 +1,6 @@
 package board;
 
-import common.Constants;
+import common.Square;
 
 import java.util.List;
 
@@ -18,11 +18,11 @@ public class Rooks extends Pieces {
 
         // Initial position
         if (color == Color.WHITE) {
-            set_bit(Constants.a1);
-            set_bit(Constants.h1);
+            set_bit(Square.valueOfPosition("a1").bits);
+            set_bit(Square.valueOfPosition("h1").bits);
         } else {
-            set_bit(Constants.a8);
-            set_bit(Constants.h8);
+            set_bit(Square.valueOfPosition("a8").bits);
+            set_bit(Square.valueOfPosition("h8").bits);
         }
     }
 

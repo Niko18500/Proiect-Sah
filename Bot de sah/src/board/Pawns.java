@@ -42,11 +42,10 @@ public class Pawns extends Pieces {
         for (int i = 8; i <= 56; i++) {
             // Check if this position has a pawn (of our color)
             if (super.get_bit(positions, i)) {
-                // If 2nd rank (for white) or 7th rank (for black),
-                // it can move 2 squares
-                if (((i <= 16) && color == Color.WHITE) ||
+                // If 2nd rank (for white) or 7th rank (for black), it can move 2 squares
+                if (((i <= 16) && (color == Color.WHITE)) ||
                         ((i >= 48) && (color == Color.BLACK))) {
-                    // Check if move is possible (no piece exists there already)
+                    // Check if move is possible (no other piece exists there already)
                     if (!super.get_bit(board.getAllPositions(), i + 16 * sign)) {
                         // Move pawn
                         Long move = super.set_bit(super.pop_bit(positions, i), i + 16 * sign);
@@ -65,7 +64,8 @@ public class Pawns extends Pieces {
                 // Check for captures
                 // If 1st or 8th file, ignore "out of board" captures
                 if (super.get_bit(board.getOpponentPositions(), i + 7 * sign)) {
-                    if (i % 8 != 0 && color == Color.WHITE || i % 8 != 7 && color == Color.BLACK) {
+                    if ((i % 8 != 0) && (color == Color.WHITE) ||
+                            (i % 8 != 7) && (color == Color.BLACK)) {
                         // Capture left piece
                         Long move = super.set_bit(super.pop_bit(positions, i), i + 7 * sign);
                         // Add pawn move to possibleMoves list
@@ -73,8 +73,9 @@ public class Pawns extends Pieces {
                     }
                 }
                 if (super.get_bit(board.getOpponentPositions(), i + 9 * sign)) {
-                    if (i % 8 != 0 && color == Color.BLACK || i % 8 != 7 && color == Color.WHITE) {
-                        // Capture left piece
+                    if ((i % 8 != 0) && (color == Color.BLACK) ||
+                            (i % 8 != 7) && (color == Color.WHITE)) {
+                        // Capture right piece
                         Long move = super.set_bit(super.pop_bit(positions, i), i + 9 * sign);
                         // Add pawn move to possibleMoves list
                         possibleMoves.add(move);

@@ -77,6 +77,8 @@ public class Board {
         allPositions = whitePositions | blackPositions;
     }
 
+    /* Methods */
+
     public long getOpponentPositions() {
         if (botColor == Color.WHITE) {
             return blackPositions;

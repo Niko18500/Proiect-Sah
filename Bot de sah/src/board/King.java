@@ -1,6 +1,7 @@
 package board;
 
 import common.Constants;
+import common.Square;
 
 import java.util.List;
 
@@ -18,9 +19,9 @@ public class King extends Pieces {
 
         // Initial position
         if (color == Color.WHITE) {
-            set_bit(Constants.e1);
+            set_bit(Square.valueOfPosition("e1").bits);
         } else {
-            set_bit(Constants.e8);
+            set_bit(Square.valueOfPosition("e8").bits);
         }
     }
 

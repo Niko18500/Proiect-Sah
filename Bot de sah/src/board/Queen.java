@@ -1,6 +1,6 @@
 package board;
 
-import common.Constants;
+import common.Square;
 
 import java.util.List;
 
@@ -18,9 +18,9 @@ public class Queen extends Pieces {
 
         // Initial position
         if (color == Color.WHITE) {
-            set_bit(Constants.d1);
+            set_bit(Square.valueOfPosition("d1").bits);
         } else {
-            set_bit(Constants.d8);
+            set_bit(Square.valueOfPosition("d8").bits);
         }
     }
 

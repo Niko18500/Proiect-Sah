@@ -1,8 +1,6 @@
 import board.Board;
 import board.Color;
-import common.Square;
 import common.Utilities;
-import jdk.jshell.execution.Util;
 
 import java.io.*;
 import java.util.List;
@@ -13,8 +11,6 @@ public class Main {
         Board board = new Board(Color.BLACK); // mai vedem dupa cum se trimite culoarea aia
         List<Long> pos;
         CurrentMove currentMove = new CurrentMove(board);
-
-        Utilities.printLong(43234889994L);
 
         XBoard.handshake();
 

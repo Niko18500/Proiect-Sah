@@ -34,26 +34,35 @@ public class Knights extends Pieces {
         generateAttacks();
     }
 
+    /**
+     *     Generates all knight attacks (for each square)
+     */
     private void generateAttacks() {
         attacks = new ArrayList<>();
 
-        long bitboard;
+        // Square we generate attacks for
+        long currentSquare;
+
+        // All attacks possible from current square
         long currentAttack;
 
+        // For each square on the board
         for (int i = 0; i < 64; i++) {
             currentAttack = 0;
-            bitboard = set_bit(0, i);
+            currentSquare = set_bit(0, i);
 
-            if (((bitboard << 17) & Constants.notAFile) != 0) currentAttack |= (bitboard << 17);
-            if (((bitboard << 15) & Constants.notHFile) != 0) currentAttack |= (bitboard << 15);
-            if (((bitboard << 10) & Constants.notABFile) != 0) currentAttack |= (bitboard << 10);
-            if (((bitboard << 6) & Constants.notGHFile) != 0) {currentAttack |= (bitboard << 6);}
+            // Ignore "out of board" moves and generate current attack
+            if (((currentSquare << 17) & Constants.notAFile) != 0) currentAttack |= (currentSquare << 17);
+            if (((currentSquare << 15) & Constants.notHFile) != 0) currentAttack |= (currentSquare << 15);
+            if (((currentSquare << 10) & Constants.notABFile) != 0) currentAttack |= (currentSquare << 10);
+            if (((currentSquare << 6) & Constants.notGHFile) != 0) currentAttack |= (currentSquare << 6);
 
-            if (((bitboard >> 17) & Constants.notHFile) != 0) currentAttack |= (bitboard >> 17);
-            if (((bitboard >> 15) & Constants.notAFile) != 0) currentAttack |= (bitboard >> 15);
-            if (((bitboard >> 10) & Constants.notGHFile) != 0) currentAttack |= (bitboard >> 10);
-            if (((bitboard >> 6) & Constants.notABFile) != 0) currentAttack |= (bitboard >> 6);
+            if (((currentSquare >> 17) & Constants.notHFile) != 0) currentAttack |= (currentSquare >> 17);
+            if (((currentSquare >> 15) & Constants.notAFile) != 0) currentAttack |= (currentSquare >> 15);
+            if (((currentSquare >> 10) & Constants.notGHFile) != 0) currentAttack |= (currentSquare >> 10);
+            if (((currentSquare >> 6) & Constants.notABFile) != 0) currentAttack |= (currentSquare >> 6);
 
+            // Add current attack to attack list (in order of squares)
             attacks.add(currentAttack);
         }
     }
@@ -69,16 +78,18 @@ public class Knights extends Pieces {
         for (int i = 0; i < 64; i++) {
             long iter = 1L << i;
 
-            // Check if we have a possible knight move
+            // Check if we have a knight there
             if ((iter & positions) != 0) {
+                // Get attacks for that square
                 long attack = attacks.get(i);
 
                 // Iterate through attacks mask bits
                 for (int j = 0; j < 64; j++) {
                     long iterJ = 1L << j;
 
+                    // Check if we have an attack for that square
                     if ((iterJ & attack) != 0) {
-                        // Check if my pieces are not there
+                        // Check that none of my pieces are there
                         if ((iterJ & attack & board.getMyPositions()) == 0) {
                             // Add to possible moves list
                             possibleMoves.add(iterJ);

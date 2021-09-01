@@ -1,6 +1,5 @@
 package board;
 
-import common.Constants;
 import common.Square;
 
 import java.util.ArrayList;
