@@ -7,5 +7,5 @@ run: main
 	java Main
 
 clean:
-	rm -r *.class
+	find . -name "*.class" -type f -delete
 
