@@ -10,90 +10,23 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-98 >first : xboard
+159 >first : xboard
 protover 2
-99 <first : javac -g Main.java
-652 <first : java Main
-692 <first : feature sigint=0 san=0 name=SuperBot done=1
-692 >first : accepted sigint
-692 >first : accepted san
-692 >first : accepted name
-692 >first : accepted done
-692 <first : 
-693 >first : new
+161 <first : javac -g Main.java
+759 <first : java Main
+786 <first : feature sigint=0 san=0 name=SuperBot done=1
+786 >first : accepted sigint
+786 >first : accepted san
+786 >first : accepted name
+786 >first : accepted done
+786 <first : 
+787 >first : new
 random
-693 >first : level 40 5 0
-693 >first : post
-693 >first : hard
-nps: w=-1, b=-1
-nps: w=-1, b=-1
-1958 >first : time 30000
-1958 >first : otim 30000
-book hit = (NULL)
-1958 >first : d2d4
-2033 <first : move d7d5
-2110 <first : 
-2110 <first : 00000000
-2110 <first : 00000000
-2110 <first : 10000000
-2110 <first : 00000000
-2110 <first : 00000000
-2110 <first : 00000000
-2110 <first : 00000000
-2111 <first : 00000000
-2111 <first : 
-2111 <first : 
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00100000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 
-2111 <first : 
-2111 <first : 00000000
-2111 <first : 00010000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 
-2111 <first : 
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000100
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 
-2111 <first : 
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000001
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 00000000
-2111 <first : 
-2111 <first : 
-3149 >first : time 29992
-3149 >first : otim 29888
-book hit = (NULL)
-3149 >first : e2e4
-3223 <first : move b8c6
-3320 <first : 
-3931 >first : time 29984
-3932 >first : otim 29817
-book hit = (NULL)
-3933 >first : e4d5
-GameEnds(27, Error writing to first chess program, 2)
-4607 >first : result 0-1 {Error writing to first chess program}
-4607 >first : force
-4607 >first : quit
+787 >first : level 40 5 0
+787 >first : post
+787 >first : hard
+792 <first : 1
+GameEnds(29, xboard exit, 2)
+710897 >first : result * {xboard exit}
+710897 >first : force
+710897 >first : quit

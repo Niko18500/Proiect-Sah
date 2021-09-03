@@ -71,7 +71,7 @@ public class Knights extends Pieces {
     // https://github.com/maksimKorzh/chess_programming/blob/master/src/bitboards/knight_attacks/bitboard.c
     @Override
     public List<Long> generateMoves(Board board) {
-        // Stores pawns' possible moves
+        // Stores knights' possible moves
         List<Long> possibleMoves = new ArrayList<>();
 
         // Iterate through positions (our colored knights on the board)

@@ -14,9 +14,10 @@ public class Utilities {
 //        pieces.getPositions() & (1L << square);
 //    }
 
-    public static void pop_bit(Pieces pieces, final int square) {
-        pieces.setPositions(pieces.getPositions() & (~(1L << square)));
-    }
+//    public static void pop_bit(Pieces pieces, final int square) {
+//        pieces.setPositions(pieces.getPositions() & (~(1L << square)));
+//    }
+
 
     public static void printLong(long x) {
         toBinary(x, 64);
@@ -40,5 +41,37 @@ public class Utilities {
 
             System.out.println(finalString);
         }
+    }
+
+    public static int bitScanForward(long x) {
+
+        if (x == 0) {
+            return -1;
+        }
+
+        long iter = 1L;
+
+        int counter = 0;
+        while ((iter & x) == 0) {
+            counter++;
+            x = x >> 1;
+        }
+        return counter;
+    }
+
+    public static int bitScanBackward(long x) {
+
+        if (x == 0) {
+            return -1;
+        }
+
+        long iter = 1L << 63;
+
+        int counter = 63;
+        while ((iter & x) == 0) {
+            counter--;
+            x = x << 1;
+        }
+        return counter;
     }
 }
