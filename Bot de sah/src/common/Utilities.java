@@ -43,7 +43,8 @@ public class Utilities {
         }
     }
 
-    public static int bitScanForward(long x) {
+    // Returns lsb
+    public static int bitScanLSB(long x) {
 
         if (x == 0) {
             return -1;
@@ -59,7 +60,8 @@ public class Utilities {
         return counter;
     }
 
-    public static int bitScanBackward(long x) {
+    // Returns msb
+    public static int bitScanMSB(long x) {
 
         if (x == 0) {
             return -1;

@@ -1,6 +1,5 @@
 import board.Board;
 import board.Color;
-import common.Square;
 import common.Utilities;
 
 import java.io.*;
@@ -19,7 +18,7 @@ public class Main {
 
 //        System.out.println(Utilities.bitScanForward(2L));
 
-        System.out.println(Utilities.bitScanBackward(3));
+        System.out.println(Utilities.bitScanMSB(3));
 
         XBoard.interpretMove(currentMove);
 
@@ -29,12 +28,20 @@ public class Main {
 
         XBoard.interpretMove(currentMove);
 
+        XBoard.sendMove("c8f5", board);
+
+        XBoard.interpretMove(currentMove);
+
+        XBoard.sendMove("e7e5", board);
+
+        XBoard.interpretMove(currentMove);
+
+        XBoard.sendMove("f8c5", board);
+
         pos = board.getBlackBishops().generateMoves(board);
         for (long iter : pos) {
             Utilities.printLong(iter);
         }
-
-        XBoard.sendMove("b8c6", board);
 
         // Ceva de genul applyMove(currentMove) -> ca sa se aplice miscarea primita de la xBoard (in clasa noastra Board zic)
         // si apoi generateMove(currentMove) -> cu algoritmul (mai e pana acolo :) )

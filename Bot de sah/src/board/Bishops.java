@@ -4,6 +4,7 @@ import common.Square;
 import common.Utilities;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,9 +14,13 @@ public class Bishops extends Pieces {
     // Rays
     private Map<String, List<Long>> rays;
 
-    public Map<String, List<Long>> getRays() {
-        return rays;
-    }
+    // Attacks
+    private List<Long> attacks;
+
+    // Poate pt rooks sau queen
+//    public Map<String, List<Long>> getRays() {
+//        return rays;
+//    }
 
     public Bishops(final Color color) {
         // Parent constructor
@@ -91,58 +96,93 @@ public class Bishops extends Pieces {
     }
 
     // https://www.rhysre.net/fast-chess-move-generation-with-magic-bitboards.html
-    @Override
-    public List<Long> generateMoves(Board board) {
+
+    private void generateAttacks(Board board) {
+        // Idee: o functie care extrage fiecare bit de 1 din attacks (pt ca ne trb fiecare mutare separata)
+
+
         // Stores bishops' possible moves
-        List<Long> possibleMoves = new ArrayList<>();
+        attacks = new ArrayList<>();
 
         // Generate Rays (4 directii pt fiecare patratel)
         long maskedBlockers;
 
         // Get bishop current position
-//        for (long i = 1L; i != 0; i = i << 1) {
-//            // If we have a bishop there
-//            if ((positions & i) != 0) {
-//
-//            }
-//        }
 
-        long iter = 1L;
-        long attacks = 0;
+        List<Integer> bishopSquares = Arrays.asList(Utilities.bitScanLSB(positions),
+                                                                Utilities.bitScanMSB(positions));
 
-        for (int i = 0; i < 64; i++) {
-            if ((iter & positions) != 0) {
-                long blockers;
+        for (int bishopSquare : bishopSquares) {
 
-                blockers = pop_bit(board.getAllPositions(), i);
+            long allAttacksRay = 0;
 
-                maskedBlockers = rays.get("SE").get(i) & blockers;
+            long blockers = pop_bit(board.getAllPositions(), bishopSquare);
 
-                int bsfOp = Utilities.bitScanForward(maskedBlockers);
+            // Lista cu directiile
+            List<String> directions = Arrays.asList("NW", "NE", "SW", "SE");
 
-//                int bsfMy = Utilities.bitScanForward(rays.get("SE").get(i) & pop_bit(board.getMyPositions(), i));
+            for (String direction : directions) {
 
-                long ceva = 1L << bsfOp;
+                long attacksRay = 0;
 
-                if ((ceva & board.getOpponentPositions()) != 0) {
-                    // E piesa oponentului si o putem lua
-                    attacks = rays.get("SE").get(i) & ~rays.get("SE").get(bsfOp);
-//                } else {
-//                    // E piesa mea si nu o pot lua
-//                    attacks = rays.get("NE").get(i) & ~rays.get("NE").get(bsfMy);
-//                }
+                // pt SE momentan
+                maskedBlockers = rays.get(direction).get(bishopSquare) & blockers;
+
+                // Check if N or S (if N -> LSB, if S -> MSB)
+                int bsfOp;
+                if (direction.equals("NW") || direction.equals("NE")) {
+                    bsfOp = Utilities.bitScanLSB(maskedBlockers);
+                } else {
+                    bsfOp = Utilities.bitScanMSB(maskedBlockers);
                 }
 
-                // pt sud trb cel ai semnificativ (in loc de bsf) -- si la nord invers evident
-                // aici a mers (h2h3) pt ca nu era decat un singur bit pe aia hehe)
+
+                if (bsfOp != -1) {
+                    long ceva = 1L << bsfOp;
 
 
+                    if ((ceva & board.getOpponentPositions()) != 0) {
+                        // E piesa oponentului si o putem lua
+                        attacksRay = rays.get(direction).get(bishopSquare) &
+                                ~rays.get(direction).get(bsfOp);
+                    } else if ((ceva & board.getMyPositions()) != 0) {
+                        attacksRay = rays.get(direction).get(bishopSquare) &
+                                ~rays.get(direction).get(bsfOp);
+                        attacksRay = ~ceva & attacksRay;
+                    }
+
+                    // No pieces in sight
+                } else {
+                    attacksRay = rays.get(direction).get(bishopSquare);
+                }
+
+                allAttacksRay |= attacksRay;
             }
-            iter = iter << 1;
+
+            attacks.add(allAttacksRay);
         }
+    }
 
+    @Override
+    public List<Long> generateMoves(Board board) {
+        generateAttacks(board);
 
-        possibleMoves.add(attacks);
+        // Stores bishops' possible moves
+        List<Long> possibleMoves = new ArrayList<>();
+
+        // Iterate through positions (our colored knights on the board)
+        for (long attack : attacks) {
+
+            for (int i = 0; i < 64; i++) {
+
+                long iter = 1L << i;
+
+                // Check if we have a bishop attack
+                if ((iter & attack) != 0) {
+                    possibleMoves.add(iter);
+                }
+            }
+        }
 
         return possibleMoves;
     }

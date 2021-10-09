@@ -1,0 +1,7 @@
+reflexion -> queen
+
+magic bitboards -> sliding pieces (~30% mai bn)
+https://www.rhysre.net/fast-chess-move-generation-with-magic-bitboards.html
+https://www.chessprogramming.org/index.php?title=Looking_for_Magics
+https://www.youtube.com/watch?v=nyk3usU95IY&list=PLmN0neTso3Jxh8ZIylk74JpwfiWNI76Cs&index=11
+https://www.chessprogramming.org/Magic_Bitboards#Implementations
