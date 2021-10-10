@@ -18,11 +18,11 @@ public class Rooks extends Pieces {
 
         // Initial position
         if (color == Color.WHITE) {
-            set_bit(Square.valueOfPosition("a1").bits);
-            set_bit(Square.valueOfPosition("h1").bits);
+            set_bit(Square.A1.bits);
+            set_bit(Square.H1.bits);
         } else {
-            set_bit(Square.valueOfPosition("a8").bits);
-            set_bit(Square.valueOfPosition("h8").bits);
+            set_bit(Square.A8.bits);
+            set_bit(Square.H8.bits);
         }
     }
 

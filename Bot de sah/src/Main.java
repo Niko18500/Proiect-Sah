@@ -16,10 +16,6 @@ public class Main {
 
 //        Utilities.printLong(board.getBlackBishops().getRays().get("SW").get(Square.D4.bits));
 
-//        System.out.println(Utilities.bitScanForward(2L));
-
-        System.out.println(Utilities.bitScanMSB(3));
-
         XBoard.interpretMove(currentMove);
 
         XBoard.sendMove("d7d5", board);

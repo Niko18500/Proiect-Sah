@@ -10,209 +10,209 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") make run
-182 >first : xboard
+101 >first : xboard
 protover 2
-185 <first : javac -g Main.java
-1274 <first : java Main
-1323 <first : feature sigint=0 san=0 name=SuperBot done=1
-1323 >first : accepted sigint
-1323 >first : accepted san
-1323 >first : accepted name
-1323 >first : accepted done
-1323 <first : 
-1324 >first : new
+102 <first : javac -g Main.java
+633 <first : java Main
+673 <first : feature sigint=0 san=0 name=SuperBot done=1
+673 >first : accepted sigint
+673 >first : accepted san
+673 >first : accepted name
+673 >first : accepted done
+673 <first : 
+674 >first : new
 random
-1324 >first : level 40 5 0
-1324 >first : post
-1324 >first : hard
-1330 <first : 1
+674 >first : level 40 5 0
+674 >first : post
+674 >first : hard
+678 <first : 1
 nps: w=-1, b=-1
 nps: w=-1, b=-1
-52260 >first : time 30000
-52260 >first : otim 30000
+1687 >first : time 30000
+1687 >first : otim 30000
 book hit = (NULL)
-52260 >first : d2d4
-52306 <first : move d7d5
-52383 <first : 
-58941 >first : time 29995
-58941 >first : otim 29336
+1687 >first : d2d4
+1761 <first : move d7d5
+1837 <first : 
+2656 >first : time 29992
+2656 >first : otim 29910
 book hit = (NULL)
-58941 >first : e2e3
-58944 <first : move c8f5
-59042 <first : 
-61912 >first : time 29995
-61912 >first : otim 29039
+2656 >first : e2e3
+2730 <first : move c8f5
+2824 <first : 
+4651 >first : time 29985
+4651 >first : otim 29718
 book hit = (NULL)
-61912 >first : a2a3
-61915 <first : move e7e5
-61997 <first : 
-64528 >first : time 29994
-64528 >first : otim 28778
+4651 >first : a2a3
+4726 <first : move e7e5
+4802 <first : 
+7011 >first : time 29977
+7011 >first : otim 29489
 book hit = (NULL)
-64528 >first : b1d2
-64531 <first : move f8c5
-64629 <first : 
-64629 <first : 00000000
-64629 <first : 00000000
-64629 <first : 00000000
-64629 <first : 00000000
-64629 <first : 00000000
-64629 <first : 10000000
-64629 <first : 00000000
-64629 <first : 00000000
-64629 <first : 
-64629 <first : 
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 01000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 
-64630 <first : 
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00010000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 
-64630 <first : 
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 01000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 
-64630 <first : 
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00010000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 
-64630 <first : 
-64630 <first : 00000000
-64630 <first : 00001000
-64630 <first : 00000000
-64630 <first : 00000000
-64630 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 
-64631 <first : 
-64631 <first : 00000100
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 
-64631 <first : 
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00100000
-64631 <first : 00000000
-64631 <first : 
-64631 <first : 
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00010000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 
-64631 <first : 
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 00000001
-64631 <first : 00000000
-64631 <first : 00000000
-64631 <first : 
-64632 <first : 
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00001000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 
-64632 <first : 
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000010
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 
-64632 <first : 
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00001000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 
-64632 <first : 
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000010
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 00000000
-64632 <first : 
-64632 <first : 
-64632 <first : 00000000
-64632 <first : 00010000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 
-64633 <first : 
-64633 <first : 00100000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 00000000
-64633 <first : 
-64633 <first : 
+7011 >first : b1d2
+7108 <first : move f8c5
+7206 <first : 
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 10000000
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 
+7206 <first : 
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 01000000
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 
+7206 <first : 
+7206 <first : 00000000
+7206 <first : 00000000
+7206 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00010000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 
+7207 <first : 
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 01000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 
+7207 <first : 
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00010000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 
+7207 <first : 
+7207 <first : 00000000
+7207 <first : 00001000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 
+7207 <first : 
+7207 <first : 00000100
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 
+7207 <first : 
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00100000
+7207 <first : 00000000
+7207 <first : 
+7207 <first : 
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 00010000
+7207 <first : 00000000
+7207 <first : 00000000
+7207 <first : 
+7207 <first : 
+7207 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000001
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 
+7208 <first : 
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00001000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 
+7208 <first : 
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000010
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 
+7208 <first : 
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00001000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 
+7208 <first : 
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000010
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 
+7208 <first : 
+7208 <first : 00000000
+7208 <first : 00010000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 
+7208 <first : 
+7208 <first : 00100000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 00000000
+7208 <first : 
+7208 <first : 
 GameEnds(29, xboard exit, 2)
-152388 >first : result * {xboard exit}
-152388 >first : force
-152388 >first : quit
+84517 >first : result * {xboard exit}
+84517 >first : force
+84517 >first : quit

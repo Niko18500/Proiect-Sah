@@ -18,9 +18,9 @@ public class Queen extends Pieces {
 
         // Initial position
         if (color == Color.WHITE) {
-            set_bit(Square.valueOfPosition("d1").bits);
+            set_bit(Square.D1.bits);
         } else {
-            set_bit(Square.valueOfPosition("d8").bits);
+            set_bit(Square.D8.bits);
         }
     }
 

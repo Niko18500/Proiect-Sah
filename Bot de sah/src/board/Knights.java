@@ -23,11 +23,11 @@ public class Knights extends Pieces {
 
         // Initial position
         if (color == Color.WHITE) {
-            set_bit(Square.valueOfPosition("b1").bits);
-            set_bit(Square.valueOfPosition("g1").bits);
+            set_bit(Square.B1.bits);
+            set_bit(Square.G1.bits);
         } else {
-            set_bit(Square.valueOfPosition("b8").bits);
-            set_bit(Square.valueOfPosition("g8").bits);
+            set_bit(Square.B8.bits);
+            set_bit(Square.G8.bits);
         }
 
         // Generate knight attacks

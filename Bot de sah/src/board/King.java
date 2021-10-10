@@ -19,9 +19,9 @@ public class King extends Pieces {
 
         // Initial position
         if (color == Color.WHITE) {
-            set_bit(Square.valueOfPosition("e1").bits);
+            set_bit(Square.E1.bits);
         } else {
-            set_bit(Square.valueOfPosition("e8").bits);
+            set_bit(Square.E8.bits);
         }
     }
 
